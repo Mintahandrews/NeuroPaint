@@ -40,8 +40,8 @@ export async function POST(req: Request) {
 
   if (userAPIKey) {
     client.apiKey = userAPIKey;
-  } else {
-    client.apiKey = process.env.TOGETHER_API_KEY;
+  } else if (process.env.TOGETHER_API_KEY) {
+    client.apiKey = process.env.TOGETHER_API_KEY as string;
   }
 
   if (!userAPIKey && !process.env.TOGETHER_API_KEY) {
