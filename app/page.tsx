@@ -80,7 +80,7 @@ export default function Home() {
     activeIndex !== undefined ? generations[activeIndex].image : undefined;
   return (
     <div className="flex h-full flex-col px-5">
-      <header className="flex flex-col md:flex-row items-center justify-between p-6 md:p-8 backdrop-blur-sm bg-black/30 dark:bg-black/30 bg-white/30 rounded-xl mb-8 shadow-lg">
+      <header className="flex flex-col md:flex-row items-center justify-between p-6 md:p-8 backdrop-blur-sm bg-white/80 dark:bg-black/30 rounded-xl mb-8 shadow-lg border border-gray-200 dark:border-gray-800">
         <div className="mb-4 md:mb-0">
           <h1 className="font-bold text-5xl bg-gradient-to-r from-violet-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
             NeuroPaint
@@ -103,7 +103,7 @@ export default function Home() {
               type="password"
               value={userAPIKey}
               onChange={(e) => setUserAPIKey(e.target.value)}
-              className="mt-2 w-full md:w-64 bg-gray-100 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 border-gray-300 dark:border-gray-700 focus:border-violet-500 focus:ring-violet-500 transition-all duration-300"
+              className="mt-2 w-full md:w-64 bg-white dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 border-gray-300 dark:border-gray-700 focus:border-violet-500 focus:ring-violet-500 transition-all duration-300"
             />
           </div>
           <ThemeToggle />
@@ -121,7 +121,7 @@ export default function Home() {
                 required
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
-                className="w-full resize-none rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-gray-100/50 dark:bg-gray-800/50 px-4 py-3 text-lg text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 shadow-lg backdrop-blur-sm transition-all duration-300 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/50"
+                className="w-full resize-none rounded-xl border-2 border-gray-300 dark:border-gray-700 bg-white/90 dark:bg-gray-800/50 px-4 py-3 text-lg text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 shadow-lg backdrop-blur-sm transition-all duration-300 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/50"
               />
               <div className="absolute right-4 top-4">
                 {(isFetching || isDebouncing) && (
